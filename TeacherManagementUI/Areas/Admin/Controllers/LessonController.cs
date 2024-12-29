@@ -6,7 +6,8 @@ using TeacherManagementUI.Helpers;
 
 namespace LessonManagementUI.Areas.Admin.Controllers
 {
-	public class LessonController() : Controller
+    [Area("Admin")]
+    public class LessonController() : Controller
     {
         private readonly HttpClient _client= HttpClientIstance.CreateClient();
 
