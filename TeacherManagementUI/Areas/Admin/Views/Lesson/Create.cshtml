@@ -1,0 +1,50 @@
+﻿@model CreateLessonDto
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Ders İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Yeni Ders Oluştur</h5>
+                        </div>
+                        <div class="card-body">
+                            <div asp-validation-summary="All"></div>
+                            <div class="form-group">
+                                <label for="lessonName">Ders Adı</label>
+                                <input type="text" class="form-control" asp-for="LessonName" placeholder="Ders adını giriniz" required>
+                                <span asp-validation-for="LessonName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lessonCode">Ders Kodu</label>
+                                <input type="text" class="form-control" asp-for="LessonCode" placeholder="Ders kodunu giriniz">
+                                <span asp-validation-for="LessonCode" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="teacherId">Eğitmen Seçimi</label>
+                                <select asp-items="@ViewBag.teacher" asp-for="TeacherId" class="form-control">
+                                    <option>Eğitmen Seçin</option>
+                                </select>
+                                <span asp-validation-for="TeacherId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Ekle</button>
+                            <a href="@Url.Action("Index", "Lesson")" class="btn btn-secondary">İptal</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

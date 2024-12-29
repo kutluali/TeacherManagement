@@ -1,22 +1,37 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TeacherManagement.Entity.Entites;
 
 namespace TeacherManagement.DataAccess.Context
 {
     public class TeacherManagementContext : IdentityDbContext<AppUser, AppRole, int>
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public TeacherManagementContext(DbContextOptions<TeacherManagementContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-6J2APNJ;Database=TeacherManagement;Integrated Security=True;");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Lesson -> Teacher ilişkisi
+            modelBuilder.Entity<Lesson>()
+                .HasOne(l => l.Teacher)
+                .WithMany(t => t.Lessons)
+                .HasForeignKey(l => l.TeacherId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // RefreshToken -> AppUser ilişkisi
+            modelBuilder.Entity<RefreshToken>()
+                .HasOne(rt => rt.User)
+                .WithMany(u => u.RefreshTokens)
+                .HasForeignKey(rt => rt.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
+
 
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
     }
 }

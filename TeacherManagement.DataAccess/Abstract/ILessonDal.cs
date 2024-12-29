@@ -9,5 +9,6 @@ namespace TeacherManagement.DataAccess.Abstract
 {
     public interface ILessonDal:IGenericDal<Lesson>
     {
-    }
+		List<Lesson> GetLessonWithTeacher();
+	}
 }

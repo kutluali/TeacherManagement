@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TeacherManagement.Entity.Entites;
 
 namespace TeacherManagement.Business.Abstract
 {
@@ -13,5 +14,5 @@ namespace TeacherManagement.Business.Abstract
         void TDelete(T entity);
         List<T> TGetListAll();
         T TGetById(int id);
-    }
+	}
 }

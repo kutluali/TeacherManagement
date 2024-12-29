@@ -1,0 +1,52 @@
+﻿@model UpdateTeacherDto
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Eğitmen İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <input type="hidden" asp-for="TeacherId" />
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Yeni Eğitmen Kartı Güncelleme Ekranı</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="teacher">Eğitmen Ad Soyad Giriniz</label>
+                                <input type="text" class="form-control" asp-for="TeacherNameSurname" id="teacher" required>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="brach">Eğitmen Branşı </label>
+                                <input type="text" class="form-control" asp-for="TeacherBranch" id="brach">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="tel">Eğitmen Telefon Numarası</label>
+                                <input type="tel" class="form-control" asp-for="TeacherPhone" id="tel">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="email">Eğitmen Mail Adresi </label>
+                                <input type="email" class="form-control" asp-for="TeacherEmail" id="email">
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <button class="btn btn-outline-warning">Eğitmen Bilgisi Güncelle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

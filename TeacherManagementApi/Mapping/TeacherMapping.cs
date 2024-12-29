@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using TeacherManagement.DTO.DTOs.TeacherDtos;
 using TeacherManagement.Entity.Entites;
-using TeacherManagementApi.DTO.TeacherDto;
 
 namespace TeacherManagementApi.Mapping
 {
@@ -8,10 +8,10 @@ namespace TeacherManagementApi.Mapping
     {
         public TeacherMapping()
         {
-            CreateMap<Teacher, ResultTeacherDto>().ReverseMap();
             CreateMap<Teacher, CreateTeacherDto>().ReverseMap();
-            CreateMap<Teacher, GetTeacherDto>().ReverseMap();
+            CreateMap<Teacher, ResultTeacherDto>().ReverseMap();
             CreateMap<Teacher, UpdateTeacherDto>().ReverseMap();
+            
         }
     }
 }

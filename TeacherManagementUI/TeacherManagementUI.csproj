@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TeacherManagement.Business\TeacherManagement.Business.csproj" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="TokenHandler\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TeacherManagementApi\TeacherManagementApi.csproj" />
   </ItemGroup>
 

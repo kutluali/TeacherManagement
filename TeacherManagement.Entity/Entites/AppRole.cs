@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace TeacherManagement.Entity.Entites
 {
-    public class AppRole:IdentityRole<int>
+    public class AppRole : IdentityRole<int>
     {
+        public string? Description { get; set; } // Rol açıklaması
     }
 }

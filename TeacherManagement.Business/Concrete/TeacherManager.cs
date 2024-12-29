@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,38 +10,10 @@ using TeacherManagement.Entity.Entites;
 
 namespace TeacherManagement.Business.Concrete
 {
-    public class TeacherManager : ITeacherService
+    public class TeacherManager : GenericManager<Teacher>, ITeacherService
     {
-        private readonly ITeacherDal _teacherDal;
-
-        public TeacherManager(ITeacherDal teacherDal)
+        public TeacherManager(IGenericDal<Teacher> _genericDal) : base(_genericDal)
         {
-            _teacherDal = teacherDal;
-        }
-
-        public void TAdd(Teacher entity)
-        {
-            _teacherDal.Add(entity);
-        }
-
-        public void TDelete(Teacher entity)
-        {
-            _teacherDal.Delete(entity);
-        }
-
-        public Teacher TGetById(int id)
-        {
-           return _teacherDal.GetById(id);
-        }
-
-        public List<Teacher> TGetListAll()
-        {
-            return _teacherDal.GetListAll();
-        }
-
-        public void TUpdate(Teacher entity)
-        {
-            _teacherDal.Update(entity);
         }
     }
 }

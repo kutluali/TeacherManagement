@@ -7,8 +7,8 @@ using TeacherManagement.Entity.Entites;
 
 namespace TeacherManagement.DataAccess.Abstract
 {
-    public interface ITeacherDal: IGenericDal<Teacher>
+    public interface ITeacherDal : IGenericDal<Teacher>
     {
-
+        Task<Teacher> TGetByName(string name);
     }
 }

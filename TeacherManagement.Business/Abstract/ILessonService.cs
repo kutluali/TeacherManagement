@@ -9,5 +9,6 @@ namespace TeacherManagement.Business.Abstract
 {
     public interface ILessonService:IGenericService<Lesson>
     {
+        List<Lesson> TGetLessonWithTeacher();
     }
 }

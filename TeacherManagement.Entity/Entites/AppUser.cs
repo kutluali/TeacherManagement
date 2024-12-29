@@ -9,7 +9,7 @@ namespace TeacherManagement.Entity.Entites
 {
     public class AppUser : IdentityUser<int>
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
+        public string NameSurname { get; set; }
+        public ICollection<RefreshToken> RefreshTokens { get; set; }
     }
 }

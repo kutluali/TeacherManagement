@@ -1,18 +1,16 @@
 ﻿using AutoMapper;
+using TeacherManagement.DTO.DTOs.LessonDtos;
 using TeacherManagement.Entity.Entites;
-using TeacherManagementApi.DTO.LessonDto;
 
 namespace TeacherManagementApi.Mapping
 {
-    public class LessonMapping:Profile
+    public class LessonMapping : Profile
     {
         public LessonMapping()
         {
-            CreateMap<Lesson, ResultLessonDto>().ReverseMap();
-            CreateMap<Lesson, CreateLessonDto>().ReverseMap();
-            CreateMap<Lesson, GetLessonDto>().ReverseMap();
-            CreateMap<Lesson, UpdateLessonDto>().ReverseMap();
+            CreateMap<CreateLessonDto, Lesson>().ReverseMap();
+            CreateMap<UpdateLessonDto, Lesson>().ReverseMap();
+            CreateMap<ResultLessonDto, Lesson>().ReverseMap();
         }
-
     }
 }

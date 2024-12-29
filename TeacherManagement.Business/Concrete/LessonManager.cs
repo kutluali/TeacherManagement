@@ -9,38 +9,17 @@ using TeacherManagement.Entity.Entites;
 
 namespace TeacherManagement.Business.Concrete
 {
-    public class LessonManager : ILessonService
+    public class LessonManager : GenericManager<Lesson>, ILessonService
     {
         private readonly ILessonDal _lessonDal;
-
-        public LessonManager(ILessonDal lessonDal)
+        public LessonManager(IGenericDal<Lesson> _genericDal, ILessonDal lessonDal) : base(_genericDal)
         {
             _lessonDal = lessonDal;
         }
 
-        public void TAdd(Lesson entity)
+        public List<Lesson> TGetLessonWithTeacher()
         {
-            _lessonDal.Add(entity);
-        }
-
-        public void TDelete(Lesson entity)
-        {
-            _lessonDal.Delete(entity);
-        }
-
-        public Lesson TGetById(int id)
-        {
-            return _lessonDal.GetById(id);
-        }
-
-        public List<Lesson> TGetListAll()
-        {
-           return _lessonDal.GetListAll();
-        }
-
-        public void TUpdate(Lesson entity)
-        {
-            _lessonDal.Update(entity);
+            return _lessonDal.GetLessonWithTeacher();
         }
     }
 }

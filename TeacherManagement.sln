@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherManagementUI", "TeacherManagementUI\TeacherManagementUI.csproj", "{A6B83920-AE20-43FE-BDAD-E89B9D4E1C59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeacherManagementUI", "TeacherManagementUI\TeacherManagementUI.csproj", "{A6B83920-AE20-43FE-BDAD-E89B9D4E1C59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherManagementApi", "TeacherManagementApi\TeacherManagementApi.csproj", "{79E433E0-53D6-460D-836E-23BD9A8883D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeacherManagementApi", "TeacherManagementApi\TeacherManagementApi.csproj", "{79E433E0-53D6-460D-836E-23BD9A8883D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherManagement.Business", "TeacherManagement.Business\TeacherManagement.Business.csproj", "{578DB8E4-80F6-4BA3-BD32-ACD1450F8E22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeacherManagement.Business", "TeacherManagement.Business\TeacherManagement.Business.csproj", "{578DB8E4-80F6-4BA3-BD32-ACD1450F8E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherManagement.Entity", "TeacherManagement.Entity\TeacherManagement.Entity.csproj", "{5AD7EAA8-E62E-400E-B835-DCF1CD5A6900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeacherManagement.Entity", "TeacherManagement.Entity\TeacherManagement.Entity.csproj", "{5AD7EAA8-E62E-400E-B835-DCF1CD5A6900}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherManagement.DataAccess", "TeacherManagement.DataAccess\TeacherManagement.DataAccess.csproj", "{B5D5B88F-0611-4F6F-9022-E017F36C2C0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeacherManagement.DataAccess", "TeacherManagement.DataAccess\TeacherManagement.DataAccess.csproj", "{B5D5B88F-0611-4F6F-9022-E017F36C2C0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherManagement.DTO", "TeacherManagement.DTO\TeacherManagement.DTO.csproj", "{8CACADE3-5DD1-4CD7-9AED-9D42ED04BEFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B5D5B88F-0611-4F6F-9022-E017F36C2C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5D5B88F-0611-4F6F-9022-E017F36C2C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5D5B88F-0611-4F6F-9022-E017F36C2C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CACADE3-5DD1-4CD7-9AED-9D42ED04BEFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CACADE3-5DD1-4CD7-9AED-9D42ED04BEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CACADE3-5DD1-4CD7-9AED-9D42ED04BEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CACADE3-5DD1-4CD7-9AED-9D42ED04BEFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

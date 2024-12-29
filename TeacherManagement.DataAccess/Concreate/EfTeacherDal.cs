@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,11 @@ namespace TeacherManagement.DataAccess.Concreate
     {
         public EfTeacherDal(TeacherManagementContext context) : base(context)
         {
+        }
+
+        public Task<Teacher> TGetByName(string name)
+        {
+            throw new NotImplementedException();
         }
     }
 }

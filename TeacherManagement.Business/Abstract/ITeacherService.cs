@@ -9,6 +9,5 @@ namespace TeacherManagement.Business.Abstract
 {
     public interface ITeacherService:IGenericService<Teacher>
     {
-        
     }
 }
